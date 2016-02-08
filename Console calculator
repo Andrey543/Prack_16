@@ -26,7 +26,7 @@ parser.add_argument(
 action='store_true',
 help='pretty output',
 )
-
+print(sys.argv)
 args=parser.parse_args()
 if not args.action:
 	print(
@@ -52,7 +52,7 @@ if args.action=='-':
 		else:
 			result-=x
 			
-if args.action=='m':
+if args.action=='*':
 	for x in value:
 		if result==None:
 			result=x
@@ -72,3 +72,6 @@ if args.verbose:
 	print('=',result,sep=='')
 else:
 	print(result)
+	
+		
+
